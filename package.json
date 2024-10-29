@@ -1,0 +1,15 @@
+{
+  "name": "bomba_bot",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "bomba_bot.js",
+  "scripts": {
+    "start": "node bomba_bot.js"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.66.0",
+    "qrcode-terminal": "^0.12.0",
+    "telegram": "^2.26.2",
+    "whatsapp-web.js": "^1.26.0"
+  }
+}

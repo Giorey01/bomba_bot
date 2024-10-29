@@ -6,11 +6,11 @@ import pkg from "whatsapp-web.js";
 const { Client, LocalAuth } = pkg;
 import qrcode from "qrcode-terminal";
 
-const apiId = apiId;
-const apiHash = "apiHash";
+const apiId = YOUR_API_ID;
+const apiHash = "YOUR_API_HASH";
 const storeSession = new StoreSession("Telegram_session");
 const groupIds = ["1001084848351", "1001248318599", "1001152328869"];
-const destinationChats = ["NUMERO"];
+const destinationChats = ["YOUR_NUMBER@c.us"];
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
@@ -36,6 +36,7 @@ WhatsAppclient.on("qr", (qr) => {
 });
 
 WhatsAppclient.on("authenticated", (session) => {
+  telegramConnection();
   console.log("WhatsApp client authenticated");
 });
 
@@ -61,6 +62,7 @@ async function telegramConnection() {
     onError: (err) => console.log(err),
   });
   console.log("You should now be connected.");
+  startListening();
 }
 
 const startListening = async () => {
@@ -82,8 +84,4 @@ const startListening = async () => {
   }, new NewMessage({}));
 };
 
-(async () => {
-  await WhatsAppclient.initialize();
-  await telegramConnection();
-  await startListening();
-})();
+await WhatsAppclient.initialize();

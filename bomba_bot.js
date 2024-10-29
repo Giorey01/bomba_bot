@@ -17,6 +17,10 @@ const rl = readline.createInterface({
 });
 
 const WhatsAppclient = new Client({
+  puppeteer: {
+    headless: true,
+    args: ["--no-sandbox"],
+  },
   authStrategy: new LocalAuth({
     dataPath: ".",
   }),

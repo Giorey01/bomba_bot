@@ -73,8 +73,8 @@ const startListening = async () => {
     const message = event.message;
     const messageFrom = message.peerId.chatId.toString();
     if (
-      groupIds.includes(messageFrom) &&
-      message.message.toUpperCase().includes("BOMBA")
+      (groupIds.includes(messageFrom) &&
+      message.message.toUpperCase().includes("BOMBA")) || (groupIds[2] == messageFrom)
     ) {
       const messageText = message.message || "";
       destinationChats.forEach((destinationChat) => {

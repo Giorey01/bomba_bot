@@ -67,7 +67,7 @@ async function telegramConnection() {
 
 const startListening = async () => {
   await Telegramclient.connect();
-  console.log("Client connesso e in ascolto di nuovi messaggi...");
+  console.log("Client connected and listening for new messages...");
 
   Telegramclient.addEventHandler(async (event) => {
     const message = event.message;

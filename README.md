@@ -17,9 +17,6 @@
    docker build -t bomba-bot .
 3. ```bash
    docker run -d --name bomba_bot_container bomba_bot
-
-
-
 ---
 
 Stay connected to the best offers without manually checking each channel. Let **Bomba Bot** keep you updated on the go!

@@ -5,7 +5,6 @@ import readline from "readline";
 import pkg from "whatsapp-web.js";
 const { Client, LocalAuth } = pkg;
 import qrcode from "qrcode-terminal";
-
 const apiId = YOUR_API_ID;
 const apiHash = "YOUR_API_HASH";
 const storeSession = new StoreSession("Telegram_session");
@@ -15,6 +14,7 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
+console.log(groupIds[2]);
 
 const WhatsAppclient = new Client({
   puppeteer: {
@@ -74,8 +74,8 @@ const startListening = async () => {
     const messageFrom = message.peerId.chatId.toString();
     if (
       (groupIds.includes(messageFrom) &&
-      message.message.toUpperCase().includes("BOMBA")) || (groupIds[2] == messageFrom)
-    ) {
+      (message.message.toUpperCase().includes("BOMBA") || message.message.toUpperCase().includes("PREZZACCIO") || message.message.toUpperCase().includes("MINIMO STORICO") || (groupIds[2] == messageFrom)
+    ))) {
       const messageText = message.message || "";
       destinationChats.forEach((destinationChat) => {
         WhatsAppclient.sendMessage(destinationChat, messageText);

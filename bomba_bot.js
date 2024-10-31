@@ -14,7 +14,6 @@ const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
-console.log(groupIds[2]);
 
 const WhatsAppclient = new Client({
   puppeteer: {

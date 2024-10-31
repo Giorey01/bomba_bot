@@ -49,8 +49,8 @@ WORKDIR /app
 COPY . .
 
 # Define env variables
-ENV API_URL=""
-ENV API_KEY=""
+ENV API_ID=""
+ENV API_HASH=""
 ENV NUMBER=""
 
 # Install your Node.js application dependencies

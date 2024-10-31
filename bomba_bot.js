@@ -12,7 +12,7 @@ const apiId = process.env.API_ID;
 const apiHash = process.env.API_HASH;
 const storeSession = new StoreSession("Telegram_session");
 const groupIds = ["1001084848351", "1001248318599", "1001152328869"];
-const destinationChats = ["${process.env.YOUR_NUMBER}@c.us"];
+const destinationChats = ["${process.env.NUMBER}@c.us"];
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,

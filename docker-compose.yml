@@ -1,0 +1,7 @@
+services:
+    bomba_bot:
+        environment:
+            - API_ID=YOUR_API_ID
+            - API_HASH=YOUR_API_HASH
+            - NUMBER=123456789
+        image: giorey/bomba_bot

@@ -5,11 +5,14 @@ import readline from "readline";
 import pkg from "whatsapp-web.js";
 const { Client, LocalAuth } = pkg;
 import qrcode from "qrcode-terminal";
-const apiId = YOUR_API_ID;
-const apiHash = "YOUR_API_HASH";
+import dotenv from "dotenv";
+
+dotenv.config()
+const apiId = process.env.API_ID;
+const apiHash = process.env.API_HASH;
 const storeSession = new StoreSession("Telegram_session");
 const groupIds = ["1001084848351", "1001248318599", "1001152328869"];
-const destinationChats = ["YOUR_NUMBER@c.us"];
+const destinationChats = ["${process.env.YOUR_NUMBER}@c.us"];
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,

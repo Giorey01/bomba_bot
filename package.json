@@ -7,6 +7,7 @@
     "start": "node bomba_bot.js"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "node-telegram-bot-api": "^0.66.0",
     "qrcode-terminal": "^0.12.0",
     "telegram": "^2.26.2",

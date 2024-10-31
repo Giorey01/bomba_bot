@@ -48,6 +48,11 @@ WORKDIR /app
 # Copy your application files into the container
 COPY . .
 
+# Define env variables
+ENV API_URL=""
+ENV API_KEY=""
+ENV NUMBER=""
+
 # Install your Node.js application dependencies
 RUN npm install
 
